@@ -1,5 +1,0 @@
-lightwave:
-    host: 192.168.8.163
-    switches:
-      R2D1:
-        name: Landing
