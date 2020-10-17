@@ -53,9 +53,9 @@ sensor:
       washing_machine_status:
         friendly_name: 'Washing Machine Status'
         value_template:  >
-          {% if states.sensor.washing_machine.state | float > 3.0 %}
+          {% if states.sensor.washing_machine_watts.state | float > 3.0 %}
             {{ "Running" }}
-          {% elif states.sensor.washing_machine.state | float > 1 %}
+          {% elif states.sensor.washing_machine_watts.state | float > 1 %}
             {{ "On" }}
           {% else %}
             {{ "Off" }}
