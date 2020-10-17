@@ -115,7 +115,8 @@ automation:
             {% endif %}
       - service: notify.notify
         data:
-          title: '\ud83d\udc55 \udd83d\udc57'
+          title: >
+            {{ "\ud83d\udc55 \udd83d\udc57" }}
           message:  >
             {% if trigger.to_state.state == "Running" %}
               {{ "Washing machine has started" }}
