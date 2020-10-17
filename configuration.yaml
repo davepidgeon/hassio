@@ -115,13 +115,10 @@ automation:
             {% endif %}
       - service: notify.notify
         data:
+          title: "\D83D\DC55 \D83D\DC57"
           message:  >
             {% if trigger.to_state.state == "Running" %}
-              {{ "Running" }}
-            {% elif trigger.to_state.state == "On" and trigger.from_state.state == "Running" %}
-              {{ "On_After_Running" }}
-            {% elif trigger.to_state.state == "On" and trigger.from_state.state == "Off" %}
-              {{ "On_After_Off" }}
+              {{ "Washing machine has started" }}
             {% else %}
-              {{ "Off" }}
+              {{ "Washing machine has finished" }}
             {% endif %}
