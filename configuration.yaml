@@ -10,19 +10,8 @@ group: !include groups.yaml
 #automation: !include automations.yaml
 #script: !include scripts.yaml
 scene: !include scenes.yaml
-
-# Lightwave RF
-lightwave:
-  host: 192.168.8.163
-  switches:
-    R2D1:
-      name: Landing
-
-# Push Bullet
-notify:
-  - name: Push Bullet
-    platform: pushbullet
-    api_key: !secret push_bullet
+notify: !include notify.yaml
+lightwave: !include lightwaverf.yaml
 
 # Washing Machine
 sensor:
